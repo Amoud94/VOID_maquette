@@ -1009,7 +1009,6 @@
     <script>
 
         document.addEventListener('DOMContentLoaded', () => {
-            const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
             const videos = document.querySelectorAll('video');
 
@@ -1054,6 +1053,7 @@
 
             function updateSlider() {
                 const width = slides[0].clientWidth;
+                const isMobile = window.matchMedia('(max-width: 767px)').matches;
 
                 if (isMobile) {
                     slider.style.transform = `translateX(-${currentIndex * width}px)`;
